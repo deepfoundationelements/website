@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Coming Soon</title>
+  <title>Deep Foundation Elements</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
     * {
@@ -24,6 +24,28 @@
       height: 100vh;
       text-align: center;
       padding: 1rem;
+      overflow: hidden;
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 2s ease forwards;
+    }
+
+    .fade-in.delay-1 {
+      animation-delay: 1s;
+    }
+
+    .fade-in.delay-2 {
+      animation-delay: 2s;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .logo {
@@ -34,12 +56,8 @@
 
     h1 {
       font-size: 2.5rem;
+      color: #595959;
       margin-bottom: 1rem;
-    }
-
-    p {
-      font-size: 1.125rem;
-      margin-bottom: 2rem;
     }
 
     .email-contact {
@@ -57,13 +75,12 @@
 
 <body>
   <!-- Replace with your actual logo file -->
-  <img src="dfe-logo.png" alt="Deep Foundation Elements" class="logo" />
+  <img src="dfe-logo.png" alt="Deep Foundation Elements" class="logo fade-in" />
 
-  <!-- <h1>We're Launching Soon</h1> -->
-  <!-- <p>Our team is working hard to bring you something amazing. Stay tuned!</p> -->
+  <h1 class="fade-in delay-1">Coming soon.</h1>
 
   <!-- Replace with your actual email address -->
-  <a href="mailto:eugene@dfelements.com" class="email-contact">eugene@dfelements.com</a>
+  <a href="mailto:eugene@dfelements.com" class="email-contact fade-in delay-2">eugene@dfelements.com</a>
 </body>
 
 </html>
